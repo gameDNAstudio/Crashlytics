@@ -124,7 +124,7 @@ void UCrashlyticsBlueprintLibrary::WriteLog(FString Log)
 	}
 #elif PLATFORM_IOS
 	dispatch_async(dispatch_get_main_queue(), ^{
-		CLS_LOG(Log.GetNSString());
+		CLS_LOG(@"%@", Log.GetNSString());
 	});
 #endif
 }
