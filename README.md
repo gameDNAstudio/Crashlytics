@@ -34,6 +34,14 @@ Spend less time finding and more time fixing crashes. Named the #1 performance S
 
 3. Go to _Edit -> Project Settings -> Crashlytics_ and set your _Crashlytics API Key_. You can obtain it on [fabric.io](http://www.fabric.io)
 
+4. Paste the following code to field called _Additional Plist Data_ in _Project Settings -> IOS_:
+
+    ```xml
+    <key>Fabric</key><dict><key>APIKey</key><string>[API_KEY]</string><key>Kits</key><array><dict><key>KitInfo</key><dict/><key>KitName</key><string>Crashlytics</string></dict></array></dict>
+    ```
+
+    and replace _API_KEY_ with _Crashlytics API Key_.
+
 ## Uploading symbols
 You need to upload symbols in order to properly handling crashes. You should do this after every submission to App Store or Google Play.
 
@@ -50,7 +58,7 @@ You need to upload symbols in order to properly handling crashes. You should do 
 
 4. In the _Project Navigator_, click on your project and add a new run script build phase
 
-5. Add following code to new run script build phase with replacing [API_KEY] and [BUILD_SECRET]
+5. Add following code to new run script build phase with replacing _[API_KEY]_ and _[BUILD_SECRET]_
 
         ./Fabric/run [API_KEY] [BUILD_SECRET]
 
