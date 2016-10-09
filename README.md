@@ -20,14 +20,19 @@ Spend less time finding and more time fixing crashes. Named the #1 performance S
 * Works with Blueprint-only & source code projects
 * Works with Launcher & GitHub UE4 versions
 
+## Blueprint nodes
+![Splash](Resources/BlueprintSample.png)
+
 ## Setup
-Copy this folder to the *Plugins* folder located in the main path of your project.
+1. Copy this folder to the *Plugins* folder located in the main path of your project.
 
-![CopyFiles](Resources/CopyFiles.png)
+    ![CopyFiles](Resources/CopyFiles.png)
 
-Enable *Crashlytics* in *Edit -> Plugins -> Misc -> Crashlytics*.
+2. Enable *Crashlytics* in *Edit -> Plugins -> Misc -> Crashlytics*.
 
-![EnablePlugin](Resources/EnablePlugin.png)
+    ![EnablePlugin](Resources/EnablePlugin.png)
+
+3. Go to _Edit -> Project Settings -> Crashlytics_ and set your _Crashlytics API Key_. You can obtain it on [fabric.io](http://www.fabric.io)
 
 ## Uploading symbols
 You need to upload symbols in order to properly handling crashes. You should do this after every submission to App Store or Google Play.
