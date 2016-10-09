@@ -41,6 +41,8 @@ Spend less time finding and more time fixing crashes. Named the #1 performance S
     ```
 
     and replace _API_KEY_ with _Crashlytics API Key_.
+    
+5. Turn on _Generate dSYM bundle for third party crash tools_ in _Project Settings_.
 
 ## Uploading symbols
 You need to upload symbols in order to properly handling crashes. You should do this after every submission to App Store or Google Play.
@@ -48,13 +50,13 @@ You need to upload symbols in order to properly handling crashes. You should do 
 ### iOS
 1. Find your Xcode project:
 
-    a. If you are directly packaging on Mac, go to _/Users/[USER_NAME]/UE4/Builds/[COMPUTER_NAME]/[PATH_TO_PROJECT_ON_WINDOWS]/Binaries/IOS/_
+    a. If you are directly packaging on Mac, go to _/[PATH_TO_PROJECT_ON_MAC]/Intermediate/ProjectFilesIOS/_
 
     b. If you are packaging with remote connection from Windows to Mac, go to _/Users/[USER_NAME]/UE4/Builds/[COMPUTER_NAME]/[PATH_TO_PROJECT_ON_WINDOWS]/Binaries/IOS/_
 
 2. Copy content from _[PLUGIN_FOLDER]/Extras_ to path from previous point. Now you should have _Crashlytics_ and _Fabric_ folders in folder from previous point.
 
-3. Run _UE4_FromPC.xcodeproj_
+3. Run _[PROJECT_NAME].xcodeproj_ or _UE4_FromPC.xcodeproj_
 
 4. In the _Project Navigator_, click on your project and add a new run script build phase
 
