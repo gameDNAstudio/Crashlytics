@@ -1,0 +1,55 @@
+<!--
+	Crashlytics ant targets for Android 
+
+	*****
+
+	If you are NOT using the build targets supplied by Android, see crashlytics_build_base.xml.
+
+	*****
+
+	Features:
+	- Adds required Crashlytics Build ID in a string resource file res/values/
+
+	- Automatically uploads ProGuard deobfuscation (aka mapping) files to Crashlytics servers, which
+	  enables viewing of deobfuscated stack traces on crashlytics.com with no manual action required.
+
+
+	How to use:
+	- Add the following line to your ant build script, replacing CRASHLYTICS_HOME with the 
+	  absolute or relative path to this build file: 
+
+		<import file="CRASHLYTICS_HOME/crashlytics_build.xml"/>
+
+
+	- The project root directory is assumed to be colocated with build.xml. You can optionally specify
+	  an alternate paths to the project root, AndroidManifest.xml, and res directories by declaring:
+
+		<property name="crashlytics.project.path" location="PROJECT.ROOT"/>
+		<property name="crashlytics.manifest.path" location="MANIFEST.PARENT/AndroidManifest.xml"/>
+		<property name="crashlytics.res.path" location="RES.PARENT/res"/>
+
+
+	If you are using the build targets supplied by android, nothing further is required!
+	If you are using customized build scripts, see crashlytics_build_base.xml
+
+-->
+
+<project name="crashlytics_targets"> 
+ 	<import file="crashlytics_build_base.xml"/>
+
+	<!--
+		Override Android's -pre-build target to invoke the Crashlytics pre-build target.
+	-->
+	<target name="-pre-build" depends="android_rules.-pre-build, crashlytics-pre-build" />
+
+	<!--
+		Override Android's -code-gen target to first invoke the Crashlytics code-gen target.
+	-->
+	<target name="-code-gen" depends="crashlytics-code-gen, android_rules.-code-gen" />
+
+	<!--
+		Override Android's -post-package target to invoke the Crashlytics post-package target.
+	-->
+	<target name="-post-package" depends="android_rules.-post-package, crashlytics-post-package" />
+
+</project>
