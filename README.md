@@ -54,7 +54,7 @@ You need to upload symbols in order to properly handling crashes. You should do 
 
     b. If you are packaging with remote connection from Windows to Mac, go to _/Users/[USER_NAME]/UE4/Builds/[COMPUTER_NAME]/[PATH_TO_PROJECT_ON_WINDOWS]/Binaries/IOS/_
 
-2. Copy content from _[PLUGIN_FOLDER]/Extras_ to path from previous point. Now you should have _Crashlytics_ and _Fabric_ folders in folder from previous point.
+2. Copy content from _[PLUGIN_FOLDER]/Extras/iOS_ to path from previous point. Now you should have _Crashlytics_ and _Fabric_ folders in folder from previous point.
 
 3. Run _[PROJECT_NAME].xcodeproj_ or _UE4_FromPC.xcodeproj_
 
