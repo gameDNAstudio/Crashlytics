@@ -66,7 +66,7 @@ You need to upload symbols in order to properly handling crashes. You should do 
 
 6. Build your project by clicking on _Product -> Build_
 
-7. Go to Fabric dashboard -> Settings -> Apps -> Your game -> Missing DSYMs. Here upload new DSYMs from [PROJECT_FOLDER]/Binaries/IOS.
+7. Go to _Fabric dashboard -> Settings -> Apps -> Your game -> Missing DSYMs_. Here upload new DSYMs from _[PROJECT_FOLDER]/Binaries/IOS_.
 
 ### Android
 
