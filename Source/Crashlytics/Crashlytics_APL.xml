@@ -39,6 +39,8 @@
 	  import io.fabric.sdk.android.Fabric;
 	  import com.crashlytics.android.Crashlytics;
 	  import com.crashlytics.android.ndk.CrashlyticsNdk;
+
+	  import android.os.Handler;
 	</insert>
   </gameActivityImportAdditions>
 
@@ -61,6 +63,8 @@
 
   <gameActivityClassAdditions>
 	<insert>
+	public boolean CrashlyticsInitialized = false;  
+	  
 	public void AndroidThunkJava_ForceCrash() 
 	{
 		Crashlytics.getInstance().crash();
@@ -93,9 +97,17 @@
 	</insert>
   </gameActivityClassAdditions>
 
-  <gameActivityOnCreateAdditions>
+  <gameActivityOnResumeAdditions>
 	<insert>
-	  Fabric.with(this, new Crashlytics(), new CrashlyticsNdk());
+	  if(!CrashlyticsInitialized) 
+	  {
+		  final Fabric fabric = new Fabric.Builder(GameActivity._activity)
+										  .kits(new Crashlytics(), new CrashlyticsNdk())
+										  .debuggable(true)
+										  .build();
+		  Fabric.with(fabric);
+		  CrashlyticsInitialized = true;
+	  }
 	</insert>
-  </gameActivityOnCreateAdditions>
+  </gameActivityOnResumeAdditions>
 </root>
