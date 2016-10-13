@@ -95,7 +95,7 @@
 	</insert>
   </gameActivityClassAdditions>
 
-  <gameActivityOnResumeAdditions>
+  <gameActivityOnCreateAdditions>
 	<insert>
 	  if(!CrashlyticsInitialized) 
 	  {
@@ -106,5 +106,5 @@
 		  CrashlyticsInitialized = true;
 	  }
 	</insert>
-  </gameActivityOnResumeAdditions>
+  </gameActivityOnCreateAdditions>
 </root>
