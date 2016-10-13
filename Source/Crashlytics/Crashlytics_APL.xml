@@ -39,8 +39,6 @@
 	  import io.fabric.sdk.android.Fabric;
 	  import com.crashlytics.android.Crashlytics;
 	  import com.crashlytics.android.ndk.CrashlyticsNdk;
-
-	  import android.os.Handler;
 	</insert>
   </gameActivityImportAdditions>
 
@@ -103,7 +101,6 @@
 	  {
 		  final Fabric fabric = new Fabric.Builder(GameActivity._activity)
 										  .kits(new Crashlytics(), new CrashlyticsNdk())
-										  .debuggable(true)
 										  .build();
 		  Fabric.with(fabric);
 		  CrashlyticsInitialized = true;
