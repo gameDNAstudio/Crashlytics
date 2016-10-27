@@ -5,7 +5,7 @@
 The **Crashlytics** plugin lets you integrate out-of-the-box automatic crash reporting solution for iOS & Android into your [Unreal Engine 4](http://www.unrealengine.com) project.
 Spend less time finding and more time fixing crashes. Named the #1 performance SDK on both iOS and Android, Crashlytics provides deep and actionable insights, even the exact line of code your app crashed on.
 
-* **Current version:** 1.0.1
+* **Current version:** 1.0.2
 * **Binaries compiled for:** Unreal Engine 4.13
 * **Required Unreal Engine 4.13 or above.**
 
@@ -66,7 +66,7 @@ You need to upload symbols in order to properly handling crashes. You should do 
 
 6. Build your project by clicking on _Product -> Build_
 
-7. Go to _Fabric dashboard -> Settings -> Apps -> Your game -> Missing DSYMs_. Here upload new DSYMs from _[PROJECT_FOLDER]/Binaries/IOS_.
+7. Go to Fabric dashboard -> Settings -> Apps -> Your game -> Missing DSYMs. Here upload new DSYMs from [PROJECT_FOLDER]/Binaries/IOS.
 
 ### Android
 
