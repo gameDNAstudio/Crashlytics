@@ -1,7 +1,7 @@
 {
   "FileVersion": 3,
   "Version": 1,
-  "VersionName": "1.0.2",
+  "VersionName": "1.1.0",
   "FriendlyName": "Crashlytics",
   "Description": "Real-time crash reporting tool",
   "Category": "Misc",
@@ -9,7 +9,7 @@
   "CreatedByURL": "http://gamednastudio.com",
   "DocsURL": "https://github.com/gameDNAstudio/Crashlytics",
   "MarketplaceURL": "",
-  "EngineVersion": "4.13.0",
+  "EngineVersion": "4.14.0",
   "SupportURL": "mailto:support@gamednastudio.com",
   "Modules": [
     {
@@ -18,7 +18,7 @@
       "LoadingPhase": "PreDefault"
     }
   ],
-  "EnabledByDefault": false,
+  "EnabledByDefault": true,
   "CanContainContent": false,
   "IsBetaVersion": false,
   "Installed": false
