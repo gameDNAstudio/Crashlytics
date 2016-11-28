@@ -44,6 +44,14 @@ Spend less time finding and more time fixing crashes. Named the #1 performance S
     
 5. Turn on _Generate dSYM bundle for third party crash tools_ in _Project Settings_.
 
+6. Go to _[PROJECT_FOLDER]/Build/Android/_
+
+  a) If you already have created _custom_rules.xml_ file, simply add:
+  ```xml
+  <import file="crashlytics_build.xml" />
+  ```
+  b) If you don't have created _custom_rules.xml_ file yet, copy it from [[PLUGIN_FOLDER]/Extras/Android/custom_rules.xml](Extras/Android/custom_rules.xml).
+
 ## Uploading symbols
 You need to upload symbols in order to properly handling crashes. You should do this after every submission to App Store or Google Play.
 
