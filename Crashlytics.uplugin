@@ -8,7 +8,7 @@
   "CreatedBy": "gameDNA",
   "CreatedByURL": "http://gamednastudio.com",
   "DocsURL": "https://github.com/gameDNAstudio/Crashlytics",
-  "MarketplaceURL": "",
+  "MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/c8f41c12db3049109b68c30f28987115",
   "EngineVersion": "4.15.0",
   "SupportURL": "mailto:support@gamednastudio.com",
   "Modules": [
