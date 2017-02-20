@@ -2,8 +2,8 @@
 // Created by Patryk Stepniewski
 // Copyright (c) 2014-2017 gameDNA. All Rights Reserved.
 
-#include "CrashlyticsPrivatePCH.h"
 #include "CrashlyticsBlueprintLibrary.h"
+#include "CrashlyticsPrivatePCH.h"
 #include "Runtime/Engine/Classes/Kismet/KismetSystemLibrary.h"
 
 #if PLATFORM_ANDROID

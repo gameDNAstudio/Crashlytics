@@ -15,6 +15,6 @@ public:
 	UCrashlyticsSettings(const FObjectInitializer& ObjectInitializer);
 
 	// Api Key
-	UPROPERTY(Config, EditAnywhere, meta = (DisplayName = "Crashlytics Api Key"))
+	UPROPERTY(Config, EditAnywhere, Category = "Crashlytics", meta = (DisplayName = "Crashlytics Api Key"))
 	FString CrashlyticsApiKey;
 };
