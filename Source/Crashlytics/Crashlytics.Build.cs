@@ -8,8 +8,10 @@ namespace UnrealBuildTool.Rules
 {
 	public class Crashlytics : ModuleRules
 	{
-		public Crashlytics(TargetInfo Target)
+		public Crashlytics(ReadOnlyTargetRules Target) : base(Target)
 		{
+			PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
+
 			Definitions.Add("WITH_CRASHLYTICS=1");
 
 			PrivateIncludePaths.Add("Crashlytics/Private");

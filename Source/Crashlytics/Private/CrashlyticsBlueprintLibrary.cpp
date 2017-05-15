@@ -3,7 +3,6 @@
 // Copyright (c) 2014-2017 gameDNA. All Rights Reserved.
 
 #include "CrashlyticsBlueprintLibrary.h"
-#include "CrashlyticsPrivatePCH.h"
 #include "Runtime/Engine/Classes/Kismet/KismetSystemLibrary.h"
 
 #if PLATFORM_ANDROID

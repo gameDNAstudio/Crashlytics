@@ -6,6 +6,8 @@
 
 #include "ModuleManager.h"
 
+DECLARE_LOG_CATEGORY_EXTERN(LogCrashlytics, Log, All);
+
 class ICrashlytics : public IModuleInterface
 {
 public:

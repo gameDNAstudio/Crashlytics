@@ -2,8 +2,8 @@
 // Created by Patryk Stepniewski
 // Copyright (c) 2014-2017 gameDNA. All Rights Reserved.
 
+#include "ICrashlytics.h"
 #include "CrashlyticsSettings.h"
-#include "CrashlyticsPrivatePCH.h"
 #include "CrashlyticsBlueprintLibrary.h"
 #include "ISettingsModule.h"
 
