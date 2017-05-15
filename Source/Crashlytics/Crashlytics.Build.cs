@@ -35,6 +35,9 @@ namespace UnrealBuildTool.Rules
 							"../ThirdParty/iOS/Crashlytics.embeddedframework.zip"
 						)
 				);
+
+				string PluginPath = Utils.MakePathRelativeTo(ModuleDirectory, BuildConfiguration.RelativeEnginePath);
+				AdditionalPropertiesForReceipt.Add(new ReceiptProperty("IOSPlugin", Path.Combine(PluginPath, "Crashlytics_UPL_IOS.xml")));
 			}
 			// Additional Frameworks and Libraries for Android
 			else if (Target.Platform == UnrealTargetPlatform.Android)
