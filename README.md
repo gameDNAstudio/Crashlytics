@@ -33,18 +33,10 @@ Spend less time finding and more time fixing crashes. Named the #1 performance S
     ![EnablePlugin](Resources/EnablePlugin.png)
 
 3. Go to _Edit -> Project Settings -> Crashlytics_ and set your _Crashlytics API Key_. You can obtain it on [fabric.io](http://www.fabric.io)
-
-4. Paste the following code to field called _Additional Plist Data_ in _Project Settings -> IOS_:
-
-    ```xml
-    <key>Fabric</key><dict><key>APIKey</key><string>[API_KEY]</string><key>Kits</key><array><dict><key>KitInfo</key><dict/><key>KitName</key><string>Crashlytics</string></dict></array></dict>
-    ```
-
-    and replace _API_KEY_ with _Crashlytics API Key_.
     
-5. Turn on _Generate dSYM bundle for third party crash tools_ in _Project Settings_.
+4. Turn on _Generate dSYM bundle for third party crash tools_ in _Project Settings_.
 
-6. Go to _[PROJECT_FOLDER]/Build/Android/_
+5. Go to _[PROJECT_FOLDER]/Build/Android/_
 
   a) If you already have created _custom_rules.xml_ file, simply add:
   ```xml
