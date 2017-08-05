@@ -11,12 +11,8 @@
   </init>
 
   <resourceCopies>
-	  <copyFile src="$S(PluginDir)/../../Source/ThirdParty/AndroidLibs/$S(Architecture)/libcrashlytics.so"
-				  dst="$S(BuildDir)/libs/armeabi-v7a/libcrashlytics.so" />
-	  <copyFile src="$S(PluginDir)/../../Source/ThirdParty/AndroidLibs/$S(Architecture)/libcrashlytics-envelope.so"
-					dst="$S(BuildDir)/libs/armeabi-v7a/libcrashlytics-envelope.so" />
-	  <copyFile src="$S(PluginDir)/../../Source/ThirdParty/AndroidLibs/$S(Architecture)/libunwind-crashlytics.so"
-				  dst="$S(BuildDir)/libs/armeabi-v7a/libunwind-crashlytics.so" />
+	  <copyDir src="$S(PluginDir)/../../Source/ThirdParty/AndroidLibs"
+				  dst="$S(BuildDir)/libs" />
   </resourceCopies>
 
   <proguardAdditions>
