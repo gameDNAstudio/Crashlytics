@@ -7,44 +7,10 @@
   </init>
 
   <iosPListUpdates>
-	<loopElements tag="$">
-	  <setStringFromTag result="sCurrentTag" tag="$"/>
-	  <setBoolIsEqual   result="isRootDictionary" arg1="$S(sCurrentTag)" arg2="dict"/>
-
-	  <if condition="isRootDictionary">
-		<true>
-		  <setElement result="dFabricKey" value="key" text="Fabric"/>
-		  <addElement tag="$" name="dFabricKey"/>
-
-		  <setElement result="dFabricDict" value="dict"/>
-
-		  <setElement result="dFabricApiKey" value="key" text="APIKey"/>
-		  <addElement tag="$dFabricDict" name="dFabricApiKey"/>
-		  <setElement result="dFabricKey" value="string" text="$S(CrashlyticsApiKey)"/>
-		  <addElement tag="$dFabricDict" name="dFabricKey"/>
-		  <setElement result="dFabricKeyKits" value="key" text="Kits"/>
-		  <addElement tag="$dFabricDict" name="dFabricKeyKits"/>
-
-		  <setElement result="dFabricKitsArray" value="array"/>
-
-		  <setElement result="dFabricKitsArrayDict" value="dict"/>
-
-		  <setElement result="dFabricKitsArrayDictKitInfo" value="key" text="KitInfo"/>
-		  <addElement tag="$dFabricKitsArrayDict" name="dFabricKitsArrayDictKitInfo"/>
-		  <setElement result="dFabricKitsArrayDictDict" value="dict"/>
-		  <addElement tag="$dFabricKitsArrayDict" name="dFabricKitsArrayDictDict"/>
-		  <setElement result="dFabricKitsArrayDictKitName" value="key" text="KitName"/>
-		  <addElement tag="$dFabricKitsArrayDict" name="dFabricKitsArrayDictKitName"/>
-		  <setElement result="dFabricKitsArrayDictKitNameCrashlytics" value="string" text="Crashlytics"/>
-		  <addElement tag="$dFabricKitsArrayDict" name="dFabricKitsArrayDictKitNameCrashlytics"/>
-
-		  <addElement tag="$dFabricKitsArray" name="dFabricKitsArrayDict"/>
-
-		  <addElement tag="$dFabricDict" name="dFabricKitsArray"/>
-
-		  <addElement tag="$" name="dFabricDict"/>
-		</true>
-	  </if>
-	</loopElements>
+	<addElements tag="dict" once="true">
+	  <key>Fabric</key>
+	</addElements>
+	<setElement result="FabricKey" xml="&lt;dict&gt;&lt;key&gt;APIKey&lt;/key&gt;&lt;string&gt;$S(CrashlyticsApiKey)&lt;/string&gt;&lt;key&gt;Kits&lt;/key&gt;&lt;array&gt;&lt;dict&gt;&lt;key&gt;KitInfo&lt;/key&gt;&lt;dict/&gt;&lt;key&gt;KitName&lt;/key&gt;&lt;string&gt;Crashlytics&lt;/string&gt;&lt;/dict&gt;&lt;/array&gt;&lt;/dict&gt;"/>
+	<addElement tag="dict" name="FabricKey" once="true" />
   </iosPListUpdates>
 </root>
