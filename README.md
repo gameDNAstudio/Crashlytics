@@ -4,9 +4,9 @@
 
 **Crashlytics** integrates out-of-the-box automatic crash reporting solution for **iOS & Android** into an Unreal Engine 4 project. Thanks to it you can spend less time on finding and more time on fixing crashes. Crashlytics provides deep and actionable insights, a real-time crash reporting solution, information about the number of crashes and affected users, the exact line of code game crashed on, and notifications about crashes via e-mail. Plugin includes all needed tools like symbols uploader and application configurator.
 
-* **Current version:** 1.4.0
-* **Binaries compiled for:** Unreal Engine 4.17
-* **Required Unreal Engine 4.17 or above.**
+* **Current version:** 1.5.0
+* **Binaries compiled for:** Unreal Engine 4.18
+* **Required Unreal Engine 4.18 or above.**
 
 ## Features
 * Real-time crash reporting tool
