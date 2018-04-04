@@ -1,5 +1,7 @@
 # PLUGIN IS DEPRECATED
 
+## **As Google acquired Fabric and moved Crashlytics into Firebase, we are forced to move also this plugin functionality to our [Ultimate Mobile Kit Firebase plugin](https://gamednastudio.com/ultimate-mobile-kit/). Migration is very easy and you won't loose any data. If you have any questions about migration, feel free to ask us at support [at] gamednastudio.com. Thank you for your understading.**
+
 ![Splash](Resources/Splash.png)
 
 # Crashlytics
