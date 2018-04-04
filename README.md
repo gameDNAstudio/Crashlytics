@@ -1,3 +1,5 @@
+# PLUGIN IS DEPRECATED
+
 ![Splash](Resources/Splash.png)
 
 # Crashlytics
@@ -43,38 +45,5 @@
   ```
   b) If you don't have created _custom_rules.xml_ file yet, copy it from [[PLUGIN_FOLDER]/Extras/Android/custom_rules.xml](Extras/Android/custom_rules.xml).
 
-## Uploading symbols
-You need to upload symbols in order to properly handling crashes. You should do this after every submission to App Store or Google Play.
-
-### iOS
-1. Find your Xcode project:
-
-    a. If you are directly packaging on Mac, go to _/[PATH_TO_PROJECT_ON_MAC]/Intermediate/ProjectFilesIOS/_
-
-    b. If you are packaging with remote connection from Windows to Mac, go to _/Users/[USER_NAME]/UE4/Builds/[COMPUTER_NAME]/[PATH_TO_PROJECT_ON_WINDOWS]/Binaries/IOS/_
-
-2. Copy content from _[PLUGIN_FOLDER]/Extras/iOS_ to path from previous point. Now you should have _Crashlytics_ and _Fabric_ folders in folder from previous point.
-
-3. Run _[PROJECT_NAME].xcodeproj_ or _UE4_FromPC.xcodeproj_
-
-4. In the _Project Navigator_, click on your project and add a new run script build phase
-
-5. Add following code to new run script build phase with replacing _[API_KEY]_ and _[BUILD_SECRET]_
-
-        ./Fabric/run [API_KEY] [BUILD_SECRET]
-
-6. Build your project by clicking on _Product -> Build_
-
-7. Go to Fabric dashboard -> Settings -> Apps -> Your game -> Missing DSYMs. Here upload new DSYMs from [PROJECT_FOLDER]/Binaries/IOS.
-
-### Android
-
-1. Add new _ant_ system variable.
-
-2. Go to _[PATH_TO_PROJECT]/Intermediate/Android/APK/_
-
-3. Open _Command Prompt (Terminal)_ and run following command:
-
-        ant crashlytics-symbols
 
 Plugin icon designed by _Freepik_.
